@@ -25,5 +25,7 @@ module Instagram
     
     #carrierwaveで NameError uninitialized-constantのようなメッセージが出た場合
     config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+    
+    config.time_zone = 'Tokyo'
   end
 end

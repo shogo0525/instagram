@@ -7,7 +7,10 @@
         <h1>写真一覧</h1>
         <% @pictures.each do |picture| %>
             <div class="row">
-                <p><%= image_tag picture.picture.url %></p>
+                <div class="row-header">
+                    <img src="" /> <%= picture.created_at %>
+                    <span><%= image_tag picture.picture.url %></span>
+                </div>
                 <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
                 <%= link_to '削除', picture_path(picture.id), method: :delete, data: {confirm: "本当に削除していいですか？?"}, class: 'btn btn-default btn-sm btn btn-danger' %>
             </div>
