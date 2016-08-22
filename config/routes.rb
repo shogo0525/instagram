@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+  
+  #トップページ
+  root "pictures#index"
   get 'pictures' => 'pictures#index'
+  #ブログ
+  resources :pictures, only:[:index, :new, :create, :edit, :update, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
