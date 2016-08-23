@@ -1,4 +1,16 @@
 Rails.application.configure do
+
+  #better_errorの設定
+  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
+  
+  #letter_openerの設定
+  #config.action_mailer.default_url_options = { host: 'dive-into-code-shogo0525.c9users.io/', port: $PORT, protocol: 'https' }
+  #config.action_controller.asset_host = 'http://localhost:3000'
+  #config.action_mailer.asset_host = config.action_controller.asset_host
+  #config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  #config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :letter_opener_web
+  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -10,7 +22,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local       = false
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
