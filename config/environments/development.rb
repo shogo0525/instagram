@@ -7,7 +7,7 @@ Rails.application.configure do
   #config.action_mailer.default_url_options = { host: 'dive-into-code-shogo0525.c9users.io/', port: $PORT, protocol: 'https' }
   #config.action_controller.asset_host = 'http://localhost:3000'
   #config.action_mailer.asset_host = config.action_controller.asset_host
-  #config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: 'dive-into-code-shogo0525.c9users.io/', port: $PORT, protocol: 'https' }
   #config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.delivery_method = :letter_opener_web
   
