@@ -17,6 +17,7 @@ header {
     background-color: white;
     height: 100px;
     .header-message {
+      border-bottom: 1px solid #efefef;
       line-height: 3;
       background-color: #DDFFDD;
       width: 100%;
@@ -129,10 +130,11 @@ input[type="submit"].btn-block{
 
 
 footer {
+    border-top: 1px solid #efefef;
     width: 100%;
-    background-color:#2c3e50;
+    background-color: white;
     padding: 10px 0;
-    color: white;
+    color: #ccc;
     margin: auto;
     padding-bottom: 10px;
     font-size: 12px;

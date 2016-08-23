@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   
+  devise_for :users
+  
   #トップページ
   root "pictures#index"
   get 'pictures' => 'pictures#index'
+  
   #ブログ
   resources :pictures, only:[:index, :new, :create, :edit, :update, :destroy]
 
