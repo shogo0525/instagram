@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :blogs
 
   #carrierwave用の設定
-  #mount_uploader :avatar, AvatarUploader
+  mount_uploader :avatar, AvatarUploader
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(provider: auth.provider, uid: auth.uid).first
