@@ -1,6 +1,7 @@
 <%= form_for(@picture) do |f| %>
 
-    <%# f.error_messages! %>
+    <%= f.error_messages! %>
+
     <%= f.file_field :picture %>
     <br>
     <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>

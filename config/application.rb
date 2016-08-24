@@ -26,6 +26,10 @@ module Instagram
     #carrierwaveで NameError uninitialized-constantのようなメッセージが出た場合
     config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
     
+    #自動で<div class="field-with-errors"></div>を挿入してしまい、
+    #勝手に挿入されてデザインが崩れるので、何も挿入しないために
+    config.action_view.field_error_proc = proc { |html_tag, _| html_tag }
+    
     config.time_zone = 'Tokyo'
   end
 end
