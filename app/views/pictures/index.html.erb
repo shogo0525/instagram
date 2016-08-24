@@ -7,8 +7,7 @@
         <% @pictures.each do |picture| %>
             <div class="row">
                 <div class="row-header">
-                    <%#picture.user.name %>が投稿しました。
-                    <%= picture.created_at %>
+                    <p><strong><%= picture.user.name %></strong> （ <%= picture.created_at %> ）</p>
                     <%= image_tag picture.picture.url %>
                 </div>
                 <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
