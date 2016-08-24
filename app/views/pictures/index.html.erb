@@ -7,7 +7,7 @@
         <% @pictures.each do |picture| %>
             <div class="row">
                 <div class="row-header">
-                    <p><strong><%= picture.user.name %></strong> （ <%= picture.created_at %> ）</p>
+                    <%= profile_img(picture.user) if profile_img(picture.user) %> <strong><%= picture.user.name %></strong> （ <%= picture.created_at %> ）
                     <%= image_tag picture.picture.url %>
                 </div>
                 <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
