@@ -41,8 +41,8 @@ class PicturesController < ApplicationController
   
   private
     def pictures_params
-      params.require(:picture).permit(:picture)
-      #binding.pry
+      #params.require(:picture).permit(:picture)
+      params.fetch(:picture, {}).permit(:picture)
     end
     
     def set_picture
